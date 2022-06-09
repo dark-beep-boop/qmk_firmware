@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include <quantum/keymap_extras/keymap_spanish_dvorak.h>
 #include <quantum/keymap_extras/keymap_spanish.h>
 
 enum layers {
@@ -21,7 +20,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Assuming ES Dvorak layout
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │AGr│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -34,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * Shift
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ ª │ ! │ " │ · │ $ │ % │ & │ / │ ( │ ) │ = │AGr│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│   │   │   │   │   │   │   │   │   │   │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -47,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * AltGr
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ \ │ | │ @ │ # │ ~ │ ¦ │ ¬ │   │   │   │   │AGr│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│   │   │ € │   │   │   │   │   │   │   │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -59,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
   [_MAIN] = LAYOUT_ortho_5x12(
-    KC_GRV,       KC_1,       KC_2,       KC_3,       KC_4,       KC_5,
-    KC_6,         KC_7,       KC_8,       KC_9,       KC_0,       KC_ALGR,
+    KC_NO,        KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
+    KC_NO,        KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
 
     KC_TAB,       KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,
     KC_Y,         KC_U,       KC_I,       KC_O,       KC_P,       KC_BSPC,
@@ -77,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Assuming ES layout
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │AlG│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│ . │ , │ Ñ │ P │ Y │ F │ G │ C │ H │ L │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -90,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * Shift
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ ª │ ! │ " │ · │ $ │ % │ & │ / │ ( │ ) │ = │AlG│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│ : │ ; │   │   │   │   │   │   │   │   │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -103,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * AltGr
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ \ │ | │ @ │ # │ ~ │ ¦ │ ¬ │   │   │   │   │AlG│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │Tab│   │   │   │   │   │   │   │   │   │   │Bsp│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -115,8 +114,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
   [_ESDV] = LAYOUT_ortho_5x12(
-    ES_MORD,    ES_1,       ES_2,       ES_3,       ES_4,       ES_5,
-    ES_6,       ES_7,       ES_8,       ES_9,       ES_0,       KC_ALGR,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
 
     KC_TAB,     ES_DOT,     ES_COMM,    ES_NTIL,    ES_P,       ES_Y,
     ES_F,       ES_G,       ES_C,       ES_H,       ES_L,       KC_BSPC,
@@ -133,11 +132,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Assuming ES layout
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │ ~ │ ! │ @ │ # │ $ │ % │ & │ * │ ( │ ) │ = │AlG│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │ ~ │ ! │ @ │ # │ $ │ % │ & │ * │ ( │ ) │ = │Bsp│
+ * │ ~ │ ! │ @ │ # │ $ │ % │ & │ * │ ( │ ) │ = │___│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │Del│ ' │ " │ ¿ │ ? │ / │ _ │ + │ { │ } │ - │ | │
+ * │___│ ' │ " │ ¿ │ ? │ / │ _ │ + │ { │ } │ - │ | │
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │___│ < │ > │ ¡ │ ! │ \ │ ´ │ ` │ [ │ ] │ ^ │___│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
@@ -145,13 +144,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
  [_OVER] = LAYOUT_ortho_5x12(
-    ES_TILD,    ES_EXLM,    ES_AT,      ES_HASH,    ES_DLR,     KC_PERC,
-    ES_AMPR,    ES_ASTR,    ES_LPRN,    ES_RPRN,    ES_EQL,     KC_ALGR,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
 
     ES_TILD,    ES_EXLM,    ES_AT,      ES_HASH,    ES_DLR,     KC_PERC,
-    ES_AMPR,    ES_ASTR,    ES_LPRN,    ES_RPRN,    ES_EQL,     KC_BSPC,
+    ES_AMPR,    ES_ASTR,    ES_LPRN,    ES_RPRN,    ES_EQL,     _______,
 
-    KC_DEL,     ES_QUOT,    ES_DQUO,    ES_IQUE,    ES_QUES,    ES_SLSH,
+    _______,    ES_QUOT,    ES_DQUO,    ES_IQUE,    ES_QUES,    ES_SLSH,
     ES_UNDS,    ES_PLUS,    ES_LCBR,    ES_RCBR,    ES_MINS,    ES_PIPE,
 
     _______,    ES_LABK,    ES_RABK,    ES_IEXL,    ES_EXLM,    ES_BSLS,
@@ -163,31 +162,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Assuming ES layout
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
- * │F1 │F2 │F3 │F4 │F5 │F6 │F7 │F8 │F9 │F10│F11│F12│
+ * │NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│NOP│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │Bsp│
+ * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │___│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │Del│F1 │F2 │F3 │F4 │F5 │F6 │MAN│ESD│   │   │Sys│
+ * │___│F1 │F2 │F3 │F4 │F5 │F6 │MAN│ESD│Mut│PSc│Del│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │Cap│F7 │F8 │F9 │F10│F11│F12│   │   │PgU│PgD│PSc│
+ * │___│F7 │F8 │F9 │F10│F11│F12│BrD│BrU│PgD│PgU│___│
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │Rst│BrD│BrU│Mut│NOP│Ctl│Sft│NOP│Nxt│VoD│VoU│Ply│
+ * │Rst│___│___│Cap│NOP│___│___│Sys│Nxt│VoD│VoU│Ply│
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
   [_UNDER] = LAYOUT_ortho_5x12(
-    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,
-    KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,     KC_F12,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
+    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,
 
     ES_MORD,    ES_1,       ES_2,       ES_3,       ES_4,       ES_5,
-    ES_6,       ES_7,       ES_8,       ES_9,       ES_0,       KC_BSPC,
+    ES_6,       ES_7,       ES_8,       ES_9,       ES_0,       _______,
 
-    KC_DEL,     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,
-    KC_F6,      MAIN,       ESDV,       KC_NO,      KC_NO,      KC_LGUI,
+    _______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,
+    KC_F6,      MAIN,       ESDV,       KC_MUTE,    KC_PSCR,    KC_DEL,
 
-    KC_CAPS,    KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,
-    KC_F12,     KC_NO,      KC_NO,      KC_PGUP,    KC_PGDN,    KC_PSCR,
+    _______,    KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,
+    KC_F12,     KC_BRID,    KC_BRIU,    KC_PGDN,    KC_PGUP,    _______,
 
-    RESET,      KC_BRID,    KC_BRIU,    KC_MUTE,    KC_NO,      KC_LCTL,
-    KC_LSFT,    KC_NO,      KC_MNXT,    KC_VOLD,    KC_VOLU,    KC_MPLY
+    RESET,      _______,    _______,    KC_CAPS,    KC_NO,      _______,
+    _______,    KC_LGUI,    KC_MNXT,    KC_VOLD,    KC_VOLU,    KC_MPLY
   )
 };
